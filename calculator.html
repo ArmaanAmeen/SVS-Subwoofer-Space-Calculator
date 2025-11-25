@@ -1,1 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Space Calculator — SVS Subwoofer Space Calculator</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About SVS</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="models.html">Model Comparison</a>
+      <a href="setup.html">Setup Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <main>
+    <h1>Wall Space Calculator</h1>
+    <p>
+      Enter your wall width and height, select units, and choose an SVS model.
+      The calculator will show how much free space is left after placing the subwoofer.
+      (The interactive JavaScript logic will come in a later step.)
+    </p>
+
+    <section>
+      <h2>Space Calculator</h2>
+      <form id="calc-form">
+        <label>
+          Wall Width
+          <input type="number" id="wallWidth" placeholder="Width (in or cm)" required />
+        </label>
+
+        <label>
+          Wall Height
+          <input type="number" id="wallHeight" placeholder="Height (in or cm)" required />
+        </label>
+
+        <label>
+          Units:
+          <select id="units">
+            <option value="in">Inches</option>
+            <option value="cm">Centimeters</option>
+          </select>
+        </label>
+
+        <label>
+          SVS Model:
+          <select id="model">
+            <option value="SB-1000">SB-1000</option>
+            <option value="SB-2000">SB-2000</option>
+            <option value="SB-3000">SB-3000</option>
+            <option value="SB-4000">SB-4000</option>
+          </select>
+        </label>
+
+        <button type="button" id="calcBtn">Calculate</button>
+      </form>
+
+      <div id="result">
+        <!-- Result text will be inserted here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Armaan Ameen</small>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
