@@ -36,7 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
       return valueIn;
     }
   }
+  function setVolumeLiters(cellId, w, h, d) {
+    var volumeCubicIn = w * h * d;
+    var liters = volumeCubicIn * 0.0163871;
 
+    var cell = document.getElementById(cellId);
+    if (cell) {
+      cell.textContent = liters.toFixed(1) + " L";
+    }
+  }
+
+  // Fill the volume column if we are on models.html
+  setVolumeLiters("sb1000-vol", 13.5, 13.0, 14.6);
+  setVolumeLiters("sb2000-vol", 14.2, 14.6, 15.7);
+  setVolumeLiters("sb3000-vol", 15.0, 15.6, 17.8);
+  setVolumeLiters("sb4000-vol", 17.8, 18.3, 21.9);
   var calcBtn = document.getElementById("calcBtn");
   var resultDiv = document.getElementById("result");
 
