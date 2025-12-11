@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (emailValue === "") {
         errors.push("Please enter your email address.");
       } else if (emailValue.indexOf("@") === -1 || emailValue.indexOf(".") === -1) {
-        // very simple email check, good enough for this class
+        // email validator
         errors.push("Please enter a valid email address.");
       }
 
