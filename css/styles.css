@@ -14,7 +14,7 @@ html, body{
 }
 
 body{
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif; /* matches your proposal vibe */
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   color:#000;
   background:#fff;
   line-height: var(--line);
@@ -162,8 +162,29 @@ footer{
   background: #fafafa;
 }
 
-/* Make labels a bit neater */
 #calc-form label {
   display: block;
   margin-bottom: 10px;
+}
+
+/* Contact form layout */
+#contact-form {
+  max-width: 480px;
+  margin: 24px auto;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  display: block;
+}
+
+#contact-message {
+  max-width: 480px;
+  margin: 8px auto 0;  
 }
