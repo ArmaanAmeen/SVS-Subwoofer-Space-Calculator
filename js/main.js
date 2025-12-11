@@ -136,12 +136,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // === Simple contact form demo ===
+  // === Contact form with basic validation ===
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert("Thanks! This demo form does not actually send email.");
+
+      var nameInput = document.getElementById("name");
+      var emailInput = document.getElementById("email");
+      var messageInput = document.getElementById("message");
+      var messageBox = document.getElementById("contact-message");
+
+      var nameValue = nameInput.value.trim();
+      var emailValue = emailInput.value.trim();
+      var messageValue = messageInput.value.trim();
+
+      var errors = [];
+
+      if (nameValue === "") {
+        errors.push("Please enter your name.");
+      }
+
+      if (emailValue === "") {
+        errors.push("Please enter your email address.");
+      } else if (emailValue.indexOf("@") === -1 || emailValue.indexOf(".") === -1) {
+        // very simple email check, good enough for this class
+        errors.push("Please enter a valid email address.");
+      }
+
+      if (messageValue === "") {
+        errors.push("Please enter a message.");
+      }
+
+      if (errors.length > 0) {
+        // show errors
+        messageBox.className = "form-message error";
+        messageBox.innerHTML = "<ul><li>" + errors.join("</li><li>") + "</li></ul>";
+      } else {
+        // show success and clear the form
+        messageBox.className = "form-message success";
+        messageBox.innerHTML = "<p>Thanks for your message! (This demo form does not actually send email.)</p>";
+
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+      }
     });
   }
 });
+

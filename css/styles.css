@@ -116,3 +116,22 @@ footer{
   text-align:center;
   color:#000;
 }
+
+.form-message {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-message.error {
+  border: 1px solid #c0392b;
+  background: #fbeaea;
+  color: #802016;
+}
+
+.form-message.success {
+  border: 1px solid #2e8540;
+  background: #e9f7ec;
+  color: #1b4d2a;
+}
