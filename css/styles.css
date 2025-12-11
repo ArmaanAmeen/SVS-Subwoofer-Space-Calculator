@@ -135,3 +135,35 @@ footer{
   background: #e9f7ec;
   color: #1b4d2a;
 }
+
+/* Calculator layout */
+.calculator-section {
+  margin-top: 16px;
+}
+
+.calculator-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#calc-form {
+  min-width: 260px;
+  max-width: 320px;
+}
+
+.result-box {
+  flex: 1;
+  min-width: 260px;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+/* Make labels a bit neater */
+#calc-form label {
+  display: block;
+  margin-bottom: 10px;
+}

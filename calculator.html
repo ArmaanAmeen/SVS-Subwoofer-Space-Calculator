@@ -26,44 +26,72 @@
       (The interactive JavaScript logic will come in a later step.)
     </p>
 
-    <section>
+    <section class="calculator-section">
       <h2>Space Calculator</h2>
-      <form id="calc-form">
-        <label>
-          Wall Width
-          <input type="number" id="wallWidth" placeholder="Width (in or cm)" required />
-        </label>
 
-        <label>
-          Wall Height
-          <input type="number" id="wallHeight" placeholder="Height (in or cm)" required />
-        </label>
+      <div class="calculator-layout">
+        <form id="calc-form">
+          <label>
+            Wall Width
+            <input
+              type="number"
+              id="wallWidth"
+              placeholder="Width (in or cm)"
+              required
+            />
+          </label>
 
-        <label>
-          Units:
-          <select id="units">
-            <option value="in">Inches</option>
-            <option value="cm">Centimeters</option>
-          </select>
-        </label>
+          <label>
+            Wall Height
+            <input
+              type="number"
+              id="wallHeight"
+              placeholder="Height (in or cm)"
+              required
+            />
+          </label>
 
-        <label>
-          SVS Model:
-          <select id="model">
-            <option value="SB-1000">SB-1000</option>
-            <option value="SB-2000">SB-2000</option>
-            <option value="SB-3000">SB-3000</option>
-            <option value="SB-4000">SB-4000</option>
-          </select>
-        </label>
+          <label>
+            Units:
+            <select id="units">
+              <option value="in">Inches</option>
+              <option value="cm">Centimeters</option>
+            </select>
+          </label>
 
-        <button type="button" id="calcBtn">Calculate</button>
-      </form>
+          <label>
+            SVS Model:
+            <select id="model">
+              <option value="SB-1000">SB-1000</option>
+              <option value="SB-2000">SB-2000</option>
+              <option value="SB-3000">SB-3000</option>
+              <option value="SB-4000">SB-4000</option>
+            </select>
+          </label>
 
-      <div id="result">
-        <!-- Result text will be inserted here by JavaScript -->
+          <button type="button" id="calcBtn">Calculate</button>
+        </form>
+
+        <div id="result" class="result-box" aria-live="polite">
+          <!-- Calculator result appears here -->
+        </div>
       </div>
     </section>
+    <section>
+    <h2>How This Calculator Works</h2>
+    <p>
+      This tool uses the wall width and height you enter, plus the approximate
+      cabinet size of the selected SVS model, to estimate how much free wall
+      space is left after placing the subwoofer.
+    </p>
+    <p>
+      All cabinet dimensions are stored in the JavaScript file in inches.
+      If you choose centimeters, the script first converts your wall size from
+      centimeters to inches, does the subtraction, and then converts the result
+      back to centimeters. The final free space values are shown in the units
+      you selected.
+    </p>
+  </section>
   </main>
 
   <footer>

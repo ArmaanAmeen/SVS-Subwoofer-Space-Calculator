@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var calcBtn = document.getElementById("calcBtn");
   var resultDiv = document.getElementById("result");
 
+  if (resultDiv) {
+    resultDiv.innerHTML = "<p>Enter your wall size and choose a model, then click <strong>Calculate</strong> to see the remaining space.</p>";
+  }
+
+  
   if (calcBtn && resultDiv) {
     calcBtn.addEventListener("click", function () {
       var wallWidthInput = document.getElementById("wallWidth");
